@@ -50,33 +50,25 @@ header {
 }
 
 .header-content img {
-  width: 100%;
+  width: 60%;
   height: auto;
   display: block;
   max-height: 500px;
   object-fit: cover;
 }
 
-.name,
-.mobile-name {
+.name {
   position: absolute;
-  color: var(--white);
+  color: #333;
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-.name {
-  bottom: 20%;
-  left: 5%;
+  top: 20%;
+  left: 75%;
 }
 
 .mobile-name {
   display: none;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .about {
@@ -200,7 +192,7 @@ header {
 footer {
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 3rem 0;
+  padding: 3rem 1.5rem;
 }
 
 .footer-content {
@@ -266,12 +258,91 @@ footer svg {
   }
 }
 
-@media (max-width: 480px) {
-  :root {
-    --spacing: 0.75rem;
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
   }
 
-  .project-icons {
-    gap: 0.5rem;
+  .header-content img {
+    width: 60%;
+  }
+
+  .mobile-name {
+    display: none;
+  }
+
+  .name {
+    position: absolute;
+    color: var(--white);
+    bottom: 20%;
+    left: 5%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+  }
+
+  .about {
+    margin-top: -3rem;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer-image img {
+    max-height: none;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .header-content img {
+    width: 60%;
+  }
+
+  .mobile-name {
+    display: none;
+  }
+
+  .name {
+    position: absolute;
+    color: var(--white);
+    bottom: 20%;
+    left: 5%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+  }
+
+  .about {
+    margin-top: -3rem;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer-image img {
+    max-height: none;
+  }
+}
+
+/* Touch devices adjustment */
+@media (hover: none) {
+  .project:hover {
+    transform: none;
   }
 }
